@@ -35,7 +35,7 @@
                                                         <constraint firstAttribute="width" constant="100" id="aBU-HV-6C0"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htq-gM-7t3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htq-gM-7t3">
                                                     <rect key="frame" x="113" y="17" width="284" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="6PJ-mG-twx"/>
@@ -44,7 +44,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCA-FS-XbZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Synopsis" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCA-FS-XbZ">
                                                     <rect key="frame" x="113" y="43" width="284" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -68,6 +68,7 @@
                                             <outlet property="posterView" destination="vF7-sS-jJQ" id="IbF-Ed-XXd"/>
                                             <outlet property="synopsisLabel" destination="zCA-FS-XbZ" id="Y3b-IV-qMV"/>
                                             <outlet property="titleLabel" destination="Htq-gM-7t3" id="bH2-NA-SeM"/>
+                                            <segue destination="aXy-LC-dXK" kind="show" id="o4o-0C-VjO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -91,6 +92,22 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="83.705357142857139"/>
         </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="PS2-0a-dQe">
+            <objects>
+                <viewController id="aXy-LC-dXK" customClass="MovieDetailsViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="59z-Bi-FZ1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="W4x-9j-69U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VNw-fm-loC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kb5-zq-K04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1941" y="84"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="1sC-fd-2fu">
             <objects>
@@ -107,7 +124,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1X-gp-wgc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="83.705357142857139"/>
+            <point key="canvasLocation" x="164" y="84"/>
         </scene>
     </scenes>
     <resources>
