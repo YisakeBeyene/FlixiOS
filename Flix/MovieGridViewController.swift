@@ -7,6 +7,7 @@
 
 import UIKit
 import AlamofireImage
+import SwiftUI
 
 class MovieGridViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -74,14 +75,26 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        //Finding the selected movie
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let movie = movies[indexPath.item]
+        
+        //Passing the selected movie to MovieDetail
+        let detailViewController = segue.destination as! MovieDetailsViewController
+        detailViewController.movie = movie
+        
+        //collectionView.deselectRow(at: indexPath, animated: true)
+        
     }
-    */
+
 
 }
